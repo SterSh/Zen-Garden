@@ -8,134 +8,161 @@
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 
 //colors
+$color-1: #0000FF; // Blue
+$color-2: #000000; // Black
+$color-3: #FFF600; // Yellow
+$color-4: #E30022; // Red
+$color-5: #FFFFFF; // White
+
+// fonts
+$primary-font: 'Raleway',
+sans-serif;
+$secondary-font: 'Montserrat Alternates',
+sans-serif;
+​ //media widths
+$width1: 480px;
+$width2: 900px;
+​ $border: solid black 7px;
+​
 
 /* basic elements */
-html { 
-    margin: 0;
-    padding: 0;
+html {
+  margin: 0;
+  padding: 0;
 }
 
-body { 
-    font: 75% georgia, sans-serif;
-    line-height: 1.88889;
-    color: #555753;  
-    margin: 0; 
-    padding: 1em;
+body {
+  font: 75% $secondary-font;
+  line-height: 1.88889;
+  color: #555753;
+  margin: 0;
+  padding: 1em;
 }
-​
-.page-wrapper {
+
+​ .page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+​ .intro {
+  display: grid;
+}
+
+​ header,
+.summary,
+.preamble {
+  grid-column: 1/3;
+}
+
+​ .main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+​ .explanation {
+  grid-column: 1/2;
+}
+
+​ .participation {
+  grid-column: 2/3;
+}
+
+​ .benefits,
+.requirements {
+  grid-column: 1/3;
+}
+
+​ .sidebar .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+​ .design-selection,
+.design-archives,
+.zen-resources {
+  grid-column: 1/3;
+}
+
+@media (min-width: $width2) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  /*intro section*/
+  .intro {
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  header,
+  .summary {
+    grid-column: 1/4;
+    border: $border;
+  }
+
+  .preamble {
+    grid-column: 1/3;
+    border: $border;
+  }
+
+  /*main supporting*/
+  #zen-supporting {
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .explanation {
+    grid-column: 3/4;
+    margin-top: -75px;
+    border: $border;
+  }
+
+  .participation {
+    grid-row: 1;
+    grid-column: 1/3;
+    border: $border;
+  }
+
+  .benefits {
+    grid-column: 3/4;
+    border: $border;
+  }
+
+  .requirements,
+  footer {
+    grid-column: 1/4;
+    border: $border;
+  }
+
+  footer a {
+    padding: 0 20px;
+  }
+
+  /*aside*/
+  .sidebar .wrapper {
+    grid-column: 1/2;
     display: grid;
     grid-template-columns: 1fr;
-}
-​
-.intro {
+  }
+
+  aside.sidebar {
+    grid-row: 2;
+    background: $color-1;
     display: grid;
-}
-​
-header, .summary, .preamble {
-    grid-column: 1/3;
-}
-​
-.main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-​
-.explanation {
+    align-items: end;
+    border: $border;
+  }
+
+  aside.sidebar a {
+    color: $color-5;
+  }
+
+  .design-selection,
+  .design-archives,
+  .zen-resources {
     grid-column: 1/2;
-}
-​
-.participation {
-    grid-column: 2/3;
-}
-​
-.benefits, .requirements {
-    grid-column: 1/3;
-}
-​
-.sidebar .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-​
-.design-selection, .design-archives, .zen-resources {
-    grid-column: 1/3;
-}
-
-@media (min-width: 900px) {
-    .page-wrapper {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-      }
-    
-      /*intro section*/
-      .intro {
-        grid-column: 2/5;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-    
-      header,
-      .summary {
-        grid-column: 1/4;
-      }
-    
-      .preamble {
-        grid-column: 1/3;
-      }
-    
-      /*main supporting*/
-      #zen-supporting {
-        grid-column: 2/5;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-    
-      .explanation {
-        grid-column: 3/4;
-        margin-top: -75px;
-      }
-    
-      .participation {
-        grid-row: 1;
-        grid-column: 1/3;
-      }
-    
-      .benefits {
-        grid-column: 3/4;
-      }
-    
-      .requirements, footer {
-        grid-column: 1/4;
-      }
-
-      footer a {
-          padding: 0 20px;
-      }
-
-    
-    
-      /*aside*/
-      .sidebar .wrapper {
-        grid-column: 1/2;
-        display: grid;
-        grid-template-columns: 1fr;
-      }
-    
-      aside.sidebar {
-        grid-row: 2;
-        background: blue;
-        display: grid;
-        align-items: end;
-      }
-    
-      aside.sidebar a {
-        color: white;
-      }
-    
-      .design-selection,
-      .design-archives,
-      .zen-resources {
-        grid-column: 1/2;
-      }
+  }
 }
