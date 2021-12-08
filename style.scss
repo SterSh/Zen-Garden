@@ -1,13 +1,5 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
-​
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
-​
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 
-/*@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&family=Raleway&display=swap');
 
 //colors
 $color-1: #0000FF;// Blue
@@ -17,18 +9,15 @@ $color-4: #E30022; // Red
 $color-5: #FFFFFF; // White
 
 // fonts
-$primary-font: 'Raleway',
-sans-serif;
-$secondary-font: 'Montserrat Alternates',
-sans-serif;
+$primary-font: 'Raleway', sans-serif;
+$secondary-font: 'Montserrat Alternates', sans-serif;
 
-​ //media widths
+//media widths
 $width1: 480px;
 $width2: 900px;
 
 //border
-​$border: solid black 7px;
-​*/
+$border: solid black 7px;
 
 /* basic elements */
 html {
