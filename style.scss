@@ -7,8 +7,10 @@
 ​
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&family=Raleway&display=swap');
+
 //colors
-$color-1: #0000FF; // Blue
+$color-1: #0000FF;// Blue
 $color-2: #000000; // Black
 $color-3: #FFF600; // Yellow
 $color-4: #E30022; // Red
@@ -19,10 +21,13 @@ $primary-font: 'Raleway',
 sans-serif;
 $secondary-font: 'Montserrat Alternates',
 sans-serif;
+
 ​ //media widths
 $width1: 480px;
 $width2: 900px;
-​ $border: solid black 7px;
+
+//border
+​$border: solid black 7px;
 ​
 
 /* basic elements */
