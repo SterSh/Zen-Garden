@@ -7,7 +7,7 @@
 ​
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&family=Raleway&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&family=Raleway&display=swap');
 
 //colors
 $color-1: #0000FF;// Blue
@@ -28,7 +28,7 @@ $width2: 900px;
 
 //border
 ​$border: solid black 7px;
-​
+​*/
 
 /* basic elements */
 html {
@@ -37,11 +37,25 @@ html {
 }
 
 body {
-  font: 75% $secondary-font;
+  font: 75% 'Montserrat Alternates',
+    sans-serif;
   line-height: 1.88889;
   color: #555753;
   margin: 0;
   padding: 1em;
+  background-color: black;
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat Alternates',
+    sans-serif;
+}
+
+p {
+  font-family: 'Raleway',
+    sans-serif;
 }
 
 ​ .page-wrapper {
@@ -59,6 +73,15 @@ body {
   grid-column: 1/3;
 }
 
+header {
+  border: solid black 7px;
+  background-color: red;
+}
+
+.summary {
+  background-color: yellow;
+}
+
 ​ .main {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -66,10 +89,19 @@ body {
 
 ​ .explanation {
   grid-column: 1/2;
+  background-color: yellow;
+  border: solid black 7px;
+}
+
+.preamble {
+  border: solid black 7px;
+  background-color: white;
 }
 
 ​ .participation {
   grid-column: 2/3;
+  border: solid black 7px;
+  background-color: yellow;
 }
 
 ​ .benefits,
@@ -88,7 +120,7 @@ body {
   grid-column: 1/3;
 }
 
-@media (min-width: $width2) {
+@media (min-width: 900px) {
   .page-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -104,12 +136,11 @@ body {
   header,
   .summary {
     grid-column: 1/4;
-    border: $border;
   }
+
 
   .preamble {
     grid-column: 1/3;
-    border: $border;
   }
 
   /*main supporting*/
@@ -122,28 +153,33 @@ body {
   .explanation {
     grid-column: 3/4;
     margin-top: -75px;
-    border: $border;
   }
 
   .participation {
     grid-row: 1;
     grid-column: 1/3;
-    border: $border;
   }
 
   .benefits {
     grid-column: 3/4;
-    border: $border;
+    border: solid black 7px;
+    background-color: red;
+  }
+
+  .requirements {
+    background-color: white;
   }
 
   .requirements,
   footer {
     grid-column: 1/4;
-    border: $border;
+    border: solid black 7px;
+    ;
   }
 
   footer a {
     padding: 0 20px;
+    color: white;
   }
 
   /*aside*/
@@ -155,14 +191,15 @@ body {
 
   aside.sidebar {
     grid-row: 2;
-    background: $color-1;
+    background: #0000FF;
     display: grid;
     align-items: end;
-    border: $border;
+    border: solid black 7px;
+    ;
   }
 
   aside.sidebar a {
-    color: $color-5;
+    color: white;
   }
 
   .design-selection,
