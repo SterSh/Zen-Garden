@@ -1,16 +1,17 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&family=Raleway&display=swap');
 
 //colors
-$color-1: #0000FF;// Blue
+$color-1: #0000FF; // Blue
 $color-2: #000000; // Black
 $color-3: #FFF600; // Yellow
 $color-4: #E30022; // Red
 $color-5: #FFFFFF; // White
 
 // fonts
-$primary-font: 'Raleway', sans-serif;
-$secondary-font: 'Montserrat Alternates', sans-serif;
+$primary-font: 'Raleway',
+sans-serif;
+$secondary-font: 'Montserrat Alternates',
+sans-serif;
 
 //media widths
 $width1: 480px;
@@ -26,10 +27,10 @@ html {
 }
 
 body {
-  font: 75% 'Montserrat Alternates',
+  /*font: 75% 'Montserrat Alternates',
     sans-serif;
   line-height: 1.88889;
-  color: #555753;
+  color: #555753;*/
   margin: 0;
   padding: 1em;
   background-color: black;
@@ -40,26 +41,27 @@ h2,
 h3 {
   font-family: 'Montserrat Alternates',
     sans-serif;
-    font-weight: bold;
-    padding: 1em;
+  font-weight: bold;
+  padding: 1em;
 }
 
-h1{
+h1 {
   font-size: 2.5em;
   padding: 1em;
 }
 
-h2{
+h2 {
   font-size: 1.5em;
 }
-h3{
+
+h3 {
   font-size: 1em;
 }
 
 p {
   font-family: 'Raleway',
     sans-serif;
-    padding: .625em;
+  padding: .625em;
 }
 
 ​ .page-wrapper {
@@ -83,9 +85,9 @@ header {
 }
 
 .summary {
-  background-color: yellow;
+  background-color: blue;
   border: solid black 7px;
-
+  color: white;
 }
 
 ​ .main {
@@ -95,8 +97,6 @@ header {
 
 ​ .explanation {
   grid-column: 1/2;
-  background-color: yellow;
-  border: solid black 7px;
 }
 
 .preamble {
@@ -104,10 +104,24 @@ header {
   background-color: white;
 }
 
+.explanation {
+  background-color: yellow;
+  border: solid black 7px;
+}
+
 ​ .participation {
   grid-column: 2/3;
+}
+
+.participation {
   border: solid black 7px;
-  background-color: yellow;
+  background-color: red;
+}
+
+.benefits {
+  border: solid black 7px;
+  background-color: blue;
+  color: white;
 }
 
 ​ .benefits,
@@ -124,6 +138,33 @@ header {
 .design-archives,
 .zen-resources {
   grid-column: 1/3;
+}
+
+.requirements {
+  border: solid black 7px;
+  background-color: white;
+}
+
+footer {
+  border: solid black 7px;
+  background-color: black;
+  color: white;
+}
+
+.design-selection {
+  border: solid black 7px;
+  background-color: red;
+}
+
+.design-archives {
+  border: solid black 7px;
+  background-color: black;
+  color: white;
+}
+
+.zen-resources {
+  border: solid black 7px;
+  background-color: yellow;
 }
 
 //large View
