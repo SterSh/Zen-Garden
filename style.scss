@@ -121,13 +121,11 @@ header {
 header h1 {
   margin: 0;
   padding: 5px;
-  text-align: right;
 }
 
 header h2 {
   margin: 0;
   padding: 5px;
-  text-align: right;
 }
 
 .summary {
@@ -183,6 +181,7 @@ footer {
 
   a {
     color: $color-5;
+    font-family: $primary-font;
   }
 }
 
@@ -199,6 +198,7 @@ footer {
     list-style-type: none;
     text-align: left;
     padding-right: 5px;
+    font-family: $primary-font;
   }
 
   a {
@@ -209,7 +209,7 @@ footer {
 
 .design-archives {
   border-top: $border-1;
-  background-color: $color-2;
+  background-color: $color-1;
   color: $color-5;
 
   h3 {
@@ -219,6 +219,7 @@ footer {
   ul {
     list-style-type: none;
     text-align: left;
+    font-family: $primary-font;
   }
 
   a {
@@ -244,6 +245,7 @@ footer {
     list-style-type: none;
     text-align: left;
     padding-right: 5px;
+    font-family: $primary-font;
   }
 }
 
