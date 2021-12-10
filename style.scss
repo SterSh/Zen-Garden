@@ -19,21 +19,26 @@ $width2: 900px;
 
 //border
 $border: solid $color-2 .4375em;
+$border-1: solid $color-2 0.875em;
 
-/* basic elements */
+//basic elements
 html {
   margin: 0;
   padding: 0;
 }
 
 body {
-  /*font: 75% 'Montserrat Alternates',
-    sans-serif;
-  line-height: 1.88889;
-  color: #555753;*/
   margin: 0;
   padding: 1em;
   background-color: $color-2;
+}
+
+.intro {
+  background: url(images/zengarden\ logo.svg) left top no-repeat;
+  background-size: 100px 100px;
+  width: 100px;
+  height: 100px;
+  display: block;
 }
 
 h1,
@@ -41,7 +46,6 @@ h2,
 h3 {
   font-family: $secondary-font;
   font-weight: bold;
-  padding: 1em;
 }
 
 h1 {
@@ -54,11 +58,14 @@ h2 {
 
 h3 {
   font-size: 24px;
+  padding-left: 10px;
+  padding-bottom: 1px;
+  margin-bottom: 0;
 }
 
 p {
   font-family: $primary-font;
-  padding: .625em;
+  padding: 10px;
 }
 
 //Grid
@@ -111,10 +118,26 @@ header {
   background-color: $color-4;
 }
 
+header h1 {
+  margin: 0;
+  padding: 5px;
+  text-align: right;
+}
+
+header h2 {
+  margin: 0;
+  padding: 5px;
+  text-align: right;
+}
+
 .summary {
   background-color: $color-1;
   border: $border;
   color: $color-5;
+
+  a {
+    color: $color-5;
+  }
 }
 
 .preamble {
@@ -130,6 +153,11 @@ header {
 .participation {
   border: $border;
   background-color: $color-4;
+  color: $color-5;
+
+  a {
+    color: $color-5;
+  }
 }
 
 .benefits {
@@ -141,29 +169,82 @@ header {
 .requirements {
   border: $border;
   background-color: $color-5;
+  padding: 5px;
+
+  a {
+    color: $color-2;
+  }
 }
 
 footer {
   border: $border;
   background-color: $color-2;
   color: $color-5;
+
+  a {
+    color: $color-5;
+  }
 }
 
 .design-selection {
-  border: $border;
+  border-top: $border-1;
   background-color: $color-4;
+
+  h3 {
+    color: $color-5;
+    padding-left: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    text-align: left;
+    padding-right: 5px;
+  }
+
+  a {
+    color: $color-5;
+    padding: 5px;
+  }
 }
 
 .design-archives {
-  border: $border;
+  border-top: $border-1;
   background-color: $color-2;
   color: $color-5;
+
+  h3 {
+    padding-left: 10px;
+  }
+
+  ul {
+    list-style-type: none;
+    text-align: left;
+  }
+
+  a {
+    color: $color-5;
+    padding: 1px;
+  }
 }
 
 .zen-resources {
-  border-top: $border;
+  border-top: $border-1;
   background-color: $color-3;
-  
+
+  h3 {
+    padding-left: 10px;
+  }
+
+  a {
+    color: $color-2;
+    padding: 1px;
+  }
+
+  ul {
+    list-style-type: none;
+    text-align: left;
+    padding-right: 5px;
+  }
 }
 
 //large View
@@ -216,9 +297,14 @@ footer {
     grid-column: 1/4;
   }
 
+  footer {
+    padding: 10px;
+  }
+
   footer a {
     padding: 0 20px;
-    color:$color-5;
+    color: $color-5;
+    margin: 10px;
   }
 
   //aside
@@ -230,13 +316,11 @@ footer {
 
   aside.sidebar {
     grid-row: 2;
-    background: $color-1;
     display: grid;
     align-items: end;
-  }
-
-  aside.sidebar a {
-    color: white;
+    background-color: $color-5;
+    border-top: $border;
+    border-right: $border;
   }
 
   .design-selection,
