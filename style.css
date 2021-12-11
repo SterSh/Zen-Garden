@@ -1,0 +1,416 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&family=Raleway&display=swap");
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 1em;
+  background-color: #000000;
+}
+
+.intro {
+  position: relative;
+}
+
+header::before {
+  background-image: url("/images/zengardenlogo.svg");
+  background-size: 100px 100px;
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  content: "";
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+  padding-left: 10px;
+  padding-bottom: 1px;
+  margin-bottom: 0;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  padding: 10px;
+}
+
+​.page-wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+​.intro {
+  display: grid;
+}
+
+​ header,
+.summary,
+.preamble {
+  grid-column: 1/3;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.explanation {
+  grid-column: 1/3;
+}
+
+.participation {
+  grid-column: 1/3;
+}
+
+​.benefits,
+.requirements {
+  grid-column: 1/3;
+}
+
+​.sidebar .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+​.design-selection,
+.design-archives,
+.zen-resources {
+  grid-column: 1/3;
+}
+
+header {
+  border: solid #000000 0.4375em;
+  background-color: #E30022;
+}
+
+header h1 {
+  margin: 0;
+  padding: 5px;
+}
+
+header h2 {
+  margin: 0;
+  padding: 5px;
+}
+
+.summary {
+  background-color: #0000FF;
+  border: solid #000000 0.4375em;
+  color: #FFFFFF;
+}
+.summary a {
+  color: #FFFFFF;
+}
+
+.preamble {
+  border: solid #000000 0.4375em;
+  background-color: #FFFFFF;
+}
+
+.explanation {
+  background-color: #FFF600;
+  border: solid #000000 0.4375em;
+}
+
+.participation {
+  border: solid #000000 0.4375em;
+  background-color: #E30022;
+  color: #FFFFFF;
+}
+.participation a {
+  color: #FFFFFF;
+}
+
+.benefits {
+  border: solid #000000 0.4375em;
+  background-color: #0000FF;
+  color: #FFFFFF;
+}
+
+.requirements {
+  border: solid #000000 0.4375em;
+  background-color: #FFFFFF;
+}
+.requirements a {
+  color: #000000;
+}
+
+footer {
+  border: solid #000000 0.4375em;
+  background-color: #000000;
+  color: #FFFFFF;
+}
+footer a {
+  color: #FFFFFF;
+  font-family: "Raleway", sans-serif;
+}
+
+.design-selection {
+  border-top: solid #000000 0.875em;
+  background-color: #FFF600;
+}
+.design-selection h3 {
+  color: #000000;
+  padding-left: 10px;
+}
+.design-selection ul {
+  list-style-type: none;
+  text-align: left;
+  padding-right: 5px;
+  font-family: "Raleway", sans-serif;
+}
+.design-selection a {
+  color: #000000;
+  padding: 5px;
+}
+
+.design-archives {
+  border-top: solid #000000 0.875em;
+  background-color: #0000FF;
+  color: #FFFFFF;
+}
+.design-archives h3 {
+  padding-left: 10px;
+}
+.design-archives ul {
+  list-style-type: none;
+  text-align: left;
+  font-family: "Raleway", sans-serif;
+}
+.design-archives a {
+  color: #FFFFFF;
+  padding: 1px;
+}
+
+.zen-resources {
+  border-top: solid #000000 0.875em;
+  background-color: #E30022;
+}
+.zen-resources h3 {
+  padding-left: 10px;
+  color: #FFFFFF;
+}
+.zen-resources a {
+  color: #FFFFFF;
+  padding: 1px;
+}
+.zen-resources ul {
+  list-style-type: none;
+  text-align: left;
+  padding-right: 5px;
+  font-family: "Raleway", sans-serif;
+}
+
+@media (min-width: 900px) {
+  .page-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .intro {
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  header,
+.summary {
+    grid-column: 1/4;
+  }
+
+  .preamble {
+    grid-column: 1/3;
+    position: relative;
+  }
+
+  #zen-supporting {
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
+  }
+
+  .explanation {
+    grid-column: 3/4;
+    margin-top: -75px;
+    position: relative;
+  }
+
+  .participation {
+    grid-row: 1;
+    grid-column: 1/3;
+    position: relative;
+  }
+
+  .benefits {
+    grid-column: 3/4;
+    position: relative;
+  }
+
+  .requirements,
+footer {
+    grid-column: 1/4;
+    position: relative;
+  }
+
+  footer {
+    padding: 10px;
+  }
+
+  footer a {
+    padding: 0 20px;
+    color: #FFFFFF;
+    margin: 10px;
+  }
+
+  .sidebar .wrapper {
+    grid-column: 1/2;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  aside.sidebar {
+    grid-row: 2;
+    display: grid;
+    align-items: end;
+    background-color: #FFFFFF;
+    border-top: solid #000000 0.4375em;
+    border-right: solid #000000 0.4375em;
+  }
+
+  .design-selection,
+.design-archives,
+.zen-resources {
+    grid-column: 1/2;
+  }
+
+  #zen-preamble::before {
+    content: "The Road to Enlightenment";
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: #FFF600;
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: 0.75s ease-in-out;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    opacity: 1;
+    color: #000000;
+  }
+
+  #zen-preamble:hover::before {
+    content: " ";
+    width: 0;
+    transition: 0.75s ease-in-out;
+    opacity: 0;
+  }
+
+  #zen-explanation::before {
+    content: "So What is This About?";
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: #E30022;
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: 0.75s ease-in-out;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    opacity: 1;
+  }
+
+  #zen-explanation:hover::before {
+    content: " ";
+    height: 0;
+    transition: 0.75s ease-in-out;
+    opacity: 0;
+  }
+
+  #zen-participation::before {
+    content: "Participation";
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: #0000FF;
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: 0.75s ease-in-out;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    opacity: 1;
+  }
+
+  #zen-participation:hover::before {
+    content: " ";
+    width: 0;
+    transition: 0.75s ease-in-out;
+    opacity: 0;
+  }
+
+  #zen-benefits::before {
+    content: "Benefits";
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: #FFF600;
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: 0.75s ease-in-out;
+    text-align: center;
+    color: #000;
+    font-size: 25px;
+    opacity: 1;
+  }
+
+  #zen-benefits:hover::before {
+    content: " ";
+    width: 0;
+    transition: 0.75s ease-in-out;
+    opacity: 0;
+  }
+
+  #zen-requirements::before {
+    content: "Requirements";
+    font-family: "Montserrat Alternates", sans-serif;
+    background-color: #E30022;
+    width: 100%;
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: 0.75s ease-in-out;
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+    opacity: 1;
+  }
+
+  #zen-requirements:hover::before {
+    content: " ";
+    width: 0;
+    transition: 0.75s ease-in-out;
+    opacity: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
