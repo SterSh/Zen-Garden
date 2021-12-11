@@ -34,11 +34,16 @@ body {
 }
 
 .intro {
-  background: url(images/zengarden\ logo.svg) left top no-repeat;
+  position: relative;
+}
+
+header::before {
+  background-image: url('/images/zengardenlogo.svg');
   background-size: 100px 100px;
-  width: 100px;
+  display: inline-block;
+  width: 100px; 
   height: 100px;
-  display: block;
+  content:"";
 }
 
 h1,
@@ -69,12 +74,12 @@ p {
 }
 
 //Grid
-​ .page-wrapper {
+​.page-wrapper {
   display: grid;
   grid-template-columns: 1fr;
 }
 
-​ .intro {
+​.intro {
   display: grid;
 }
 
@@ -102,7 +107,7 @@ p {
   grid-column: 1/3;
 }
 
-​ .sidebar .wrapper {
+​.sidebar .wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -167,7 +172,6 @@ header h2 {
 .requirements {
   border: $border;
   background-color: $color-5;
-  padding: 5px;
 
   a {
     color: $color-2;
@@ -278,25 +282,30 @@ footer {
     grid-column: 2/5;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    position: relative;
   }
 
   .explanation {
     grid-column: 3/4;
     margin-top: -75px;
+    position: relative;
   }
 
   .participation {
     grid-row: 1;
     grid-column: 1/3;
+    position: relative;
   }
 
   .benefits {
     grid-column: 3/4;
+    position: relative;
   }
 
   .requirements,
   footer {
     grid-column: 1/4;
+    position: relative;
   }
 
   footer {
@@ -331,22 +340,68 @@ footer {
     grid-column: 1/2;
   }
 
-  //transition 
-  #zen-preamble::before {
-    content: "The Road to Enlightenment";
-    background-color: red;
+  //Transition Mixin
+  @mixin transition($title, $background-color, $text-color) {
+    content: "#{$title}";
+    font-family: $secondary-font;
+    background-color: $background-color;
     width: 100%;
     display: block;
     height: 100%;
     position: absolute;
     transition: .75s ease-in-out;
     text-align: center;
-    color: #FFF;
+    color: $text-color;
     font-size: 25px;
+    opacity: 1;
+  }
+
+  @mixin transition-end($direction) {
+    content: " ";
+    #{$direction}: 0;
+    transition: .75s ease-in-out;
+    opacity: 0;
+  }
+
+  //transition 
+  #zen-preamble::before {
+    @include transition("The Road to Enlightenment", $color-4, #fff);
   }
 
   #zen-preamble:hover::before {
-    width: 0;
-    transition: .75s ease-in-out;
+    @include transition-end(width);
+  }
+
+  #zen-explanation::before {
+    @include transition("So What is This About?", $color-4, #fff);
+  }
+    
+
+  #zen-explanation:hover::before {
+    @include transition-end(height);
+  }
+
+  #zen-participation::before {
+    @include transition("Participation", $color-1, #fff);
+  }
+
+  #zen-participation:hover::before {
+    @include transition-end(width);
+  }
+
+  #zen-benefits::before {
+    @include transition("Benefits", $color-3, #000);
+  }
+
+  #zen-benefits:hover::before {
+    @include transition-end(width);
+  }
+
+  #zen-requirements::before {
+    @include transition("Requirements", $color-4, #fff);
+  }
+
+  #zen-requirements:hover::before {
+    @include transition-end(width);
   }
 }
