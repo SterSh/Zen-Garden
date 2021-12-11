@@ -191,10 +191,10 @@ footer {
 
 .design-selection {
   border-top: $border-1;
-  background-color: $color-4;
+  background-color: $color-3;
 
   h3 {
-    color: $color-5;
+    color: $color-2;
     padding-left: 10px;
   }
 
@@ -206,7 +206,7 @@ footer {
   }
 
   a {
-    color: $color-5;
+    color: $color-2;
     padding: 5px;
   }
 }
@@ -234,14 +234,15 @@ footer {
 
 .zen-resources {
   border-top: $border-1;
-  background-color: $color-3;
+  background-color: $color-4;
 
   h3 {
     padding-left: 10px;
+    color: $color-5;
   }
 
   a {
-    color: $color-2;
+    color: $color-5;
     padding: 1px;
   }
 
@@ -365,7 +366,8 @@ footer {
 
   //transition 
   #zen-preamble::before {
-    @include transition("The Road to Enlightenment", $color-4, #fff);
+    @include transition("The Road to Enlightenment", $color-3, #fff);
+    color: $color-2;
   }
 
   #zen-preamble:hover::before {
