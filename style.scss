@@ -1,25 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital@1&family=Raleway&display=swap');
 
-//colors
-$color-1: #0000FF; // Blue
-$color-2: #000000; // Black
-$color-3: #FFF600; // Yellow
-$color-4: #E30022; // Red
-$color-5: #FFFFFF; // White
-
-// fonts
-$primary-font: 'Raleway',
-sans-serif;
-$secondary-font: 'Montserrat Alternates',
-sans-serif;
-
-//media widths
-$width1: 480px;
-$width2: 900px;
-
-//border
-$border: solid $color-2 .4375em;
-$border-1: solid $color-2 0.875em;
+@import '_variables'
 
 //basic elements
 html {
@@ -41,9 +22,9 @@ header::before {
   background-image: url('/images/zengardenlogo.svg');
   background-size: 100px 100px;
   display: inline-block;
-  width: 100px; 
+  width: 100px;
   height: 100px;
-  content:"";
+  content: "";
 }
 
 h1,
@@ -377,7 +358,7 @@ footer {
   #zen-explanation::before {
     @include transition("So What is This About?", $color-4, #fff);
   }
-    
+
 
   #zen-explanation:hover::before {
     @include transition-end(height);
